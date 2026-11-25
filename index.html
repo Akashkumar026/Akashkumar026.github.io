@@ -3,91 +3,137 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Akashkumar S</title>
+<title>Akashkumar S | Computer Science Student</title>
 <meta name="description" content="Akashkumar S, computer science student. Java, Python, full-stack web and IoT.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fff;--text:#1c1c1c;--muted:#6b6b6b;--line:#e6e6e6;--accent:#1d4ed8}
+:root{--bg:#faf8f4;--card:#fff;--ink:#17171a;--muted:#6a675f;--line:#e4dfd4;--accent:#c2410c}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 Georgia,"Times New Roman",serif}
-.wrap{max-width:680px;margin:0 auto;padding:56px 24px 80px}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
-nav{display:flex;gap:20px;font:15px system-ui,sans-serif;margin-bottom:64px}
-nav a{color:var(--muted)}
-h1{font-size:34px;line-height:1.2;margin:0 0 6px;font-weight:600}
-h2{font:600 13px system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:56px 0 18px;padding-top:24px;border-top:1px solid var(--line)}
-h3{font-size:18px;margin:0 0 2px;font-weight:600}
-.sub{color:var(--muted);margin:0 0 20px}
-p{margin:0 0 14px}
-.item{margin-bottom:26px}
-.meta{font:14px system-ui,sans-serif;color:var(--muted);margin-bottom:4px}
-.skills p{margin-bottom:8px}
-.skills b{font:600 15px system-ui,sans-serif}
-ul{padding-left:20px;margin:0}
-li{margin-bottom:6px}
-footer{margin-top:64px;font:14px system-ui,sans-serif;color:var(--muted)}
-@media(max-width:480px){h1{font-size:28px}nav{flex-wrap:wrap;margin-bottom:40px}}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:26px 0}
+.logo{font:600 20px Fraunces,Georgia,serif;text-decoration:none}
+.logo span{color:var(--accent)}
+nav{display:flex;gap:26px;font-size:14px}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--accent)}
+.hero{padding:88px 0 72px;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 22px}
+h1{font:500 clamp(44px,8vw,88px)/1.02 Fraunces,Georgia,serif;letter-spacing:-.02em;margin:0 0 28px;max-width:11em}
+h1 em{font-style:italic;color:var(--accent)}
+.lead{font-size:20px;line-height:1.55;color:#3d3b36;max-width:36em;margin:0 0 36px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:500;font-size:15px;text-decoration:none;border:1px solid var(--ink)}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.primary:hover{background:var(--accent);border-color:var(--accent)}
+.btn:not(.primary):hover{border-color:var(--accent);color:var(--accent)}
+section{padding:80px 0;border-bottom:1px solid var(--line)}
+.sec{display:grid;grid-template-columns:200px 1fr;gap:40px}
+h2{font:500 14px Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:6px 0 0}
+h2 b{color:var(--accent);margin-right:10px}
+.about p{font:400 22px/1.5 Fraunces,Georgia,serif;margin:0 0 18px;max-width:30em}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px;display:flex;flex-direction:column;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.tag{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:12px}
+.card h3{font:500 24px/1.2 Fraunces,Georgia,serif;margin:0 0 12px}
+.card p{color:#46443e;margin:0 0 20px;font-size:15px}
+.card .link{margin-top:auto;font-weight:500;font-size:14px;text-decoration:none;border-bottom:1px solid var(--accent);align-self:flex-start;padding-bottom:2px}
+.card .link:hover{color:var(--accent)}
+.skills div{display:grid;grid-template-columns:170px 1fr;gap:20px;padding:16px 0;border-top:1px solid var(--line)}
+.skills div:first-child{border-top:0;padding-top:0}
+.skills b{font-weight:600}
+.skills span{color:#46443e}
+.tl{padding:0 0 28px 24px;border-left:1px solid var(--line);position:relative;margin-left:4px}
+.tl:before{content:"";position:absolute;left:-5px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--accent)}
+.tl h3{font:500 22px Fraunces,Georgia,serif;margin:0 0 2px}
+.when{font-size:14px;color:var(--muted);margin-bottom:6px}
+.tl p{margin:0;color:#46443e}
+ul.plain{margin:8px 0 0;padding-left:18px;color:#46443e}
+ul.plain li{margin-bottom:6px}
+.contact{text-align:left}
+.contact .big{font:500 clamp(30px,5vw,56px)/1.1 Fraunces,Georgia,serif;letter-spacing:-.01em;margin:0 0 28px;word-break:break-word}
+.contact .big a{text-decoration:none;border-bottom:2px solid var(--accent)}
+.contact .big a:hover{color:var(--accent)}
+.links{display:flex;gap:24px;font-size:15px}
+.links a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line)}
+.links a:hover{color:var(--accent)}
+footer{padding:32px 0 48px;font-size:13px;color:var(--muted)}
+@media(max-width:760px){
+.sec{grid-template-columns:1fr;gap:22px}
+.cards{grid-template-columns:1fr}
+.hero{padding:56px 0 48px}
+section{padding:52px 0}
+nav{gap:16px;font-size:13px}
+nav a:nth-child(n+4){display:none}
+.skills div{grid-template-columns:1fr;gap:2px}
+.about p{font-size:19px}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
-<nav><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
-
-<header>
-<h1>Akashkumar S</h1>
-<p class="sub">Computer science student. Java, Python, web and IoT.</p>
-<p>I'm a third-year B.E. student at Mahendra Engineering College, Namakkal, looking for a software or IT internship.</p>
-<p><a href="mailto:akash201926@gmail.com">akash201926@gmail.com</a> &middot; <a href="https://github.com/Akashkumar026">GitHub</a> &middot; <a href="https://www.linkedin.com/in/akashkumar-s-6b10263b5/">LinkedIn</a></p>
+<header class="top">
+<a class="logo" href="#">Akashkumar<span>.</span></a>
+<nav><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
 </header>
 
-<section id="about">
-<h2>About</h2>
-<p>I build small, practical software: web apps, IoT systems and data dashboards. I've done a full-stack (MERN) internship, built an agriculture platform, and analysed real-estate prices in Tableau.</p>
-<p>I lead my teams, help run college events and take classes for juniors.</p>
-</section>
+<div class="hero">
+<p class="eyebrow">Computer science student &middot; Namakkal, India</p>
+<h1>I build <em>practical</em> software.</h1>
+<p class="lead">I'm Akashkumar S, a third-year B.E. student working with Java, Python, full-stack web and IoT. I'm looking for a software or IT internship.</p>
+<div class="cta"><a class="btn primary" href="#projects">See my projects</a><a class="btn" href="mailto:akash201926@gmail.com">Get in touch</a></div>
+</div>
 
-<section id="projects">
-<h2>Projects</h2>
-<div class="item"><h3>AgriLoop AI</h3><div class="meta">AI, mobile, logistics</div>
-<p>Circular agriculture platform connecting farmers, customers, delivery agents, warehouses and admins. Quality-aware vegetable management, logistics, a voice assistant and organic waste recovery. <a href="https://github.com/Akashkumar026/AgriLoop-AI">Code</a></p></div>
-<div class="item"><h3>OMedico, Book a Doctor</h3><div class="meta">MERN, MongoDB, JWT</div>
-<p>Doctor appointment platform with dashboards for patients, doctors and admins, online booking, waiting lists and admin approval of doctors. Built during my internship. <a href="https://github.com/Akashkumar026/BOOK-A-DOCTOR">Code</a></p></div>
-<div class="item"><h3>MailPilot</h3><div class="meta">UiPath, Gmail, Excel</div>
-<p>RPA workflow that reads Gmail, classifies messages by keyword, assigns High, Medium or Low priority, flags follow-ups and logs everything to Excel.</p></div>
-<div class="item"><h3>Real Estate Price Prediction</h3><div class="meta">Tableau, data analytics</div>
-<p>Dashboards for comparing real-estate price trends. <a href="https://github.com/Akashkumar026/Real-Estate-Price-Prediction-Tableau">Code</a></p></div>
-<div class="item"><h3>IoT projects</h3><div class="meta">C++, MQTT</div>
-<p>Smart-home MQTT assignment and sensor-based projects. <a href="https://github.com/Akashkumar026/IOT">Code</a></p></div>
-<p>More on <a href="https://github.com/Akashkumar026?tab=repositories">GitHub</a>.</p>
-</section>
+<section id="about"><div class="sec about">
+<h2><b>01</b>About</h2>
+<div>
+<p>I make small, useful things: web apps, IoT systems and data dashboards.</p>
+<p>I've done a full-stack MERN internship, built an agriculture platform, and analysed real-estate prices in Tableau. I lead my teams, help run college events and take classes for juniors.</p>
+</div></div></section>
 
-<section id="skills" class="skills">
-<h2>Skills</h2>
-<p><b>Languages</b> &nbsp;Java, Python, C, data structures and algorithms</p>
-<p><b>Web</b> &nbsp;HTML, CSS, React, Node.js, Express, REST APIs, Spring Boot (basic)</p>
-<p><b>Data</b> &nbsp;Tableau, MongoDB (basic), MySQL (basic)</p>
-<p><b>IoT and systems</b> &nbsp;MQTT, Red Hat Linux, PowerShell</p>
-<p><b>Tools</b> &nbsp;Git, GitHub, UiPath, Excel</p>
-</section>
+<section id="projects"><div class="sec">
+<h2><b>02</b>Projects</h2>
+<div class="cards">
+<div class="card"><div class="tag">AI &middot; Mobile &middot; Logistics</div><h3>AgriLoop AI</h3><p>Circular agriculture platform connecting farmers, customers, delivery agents, warehouses and admins. Quality-aware vegetable management, logistics, a voice assistant and organic waste recovery.</p><a class="link" href="https://github.com/Akashkumar026/AgriLoop-AI">View code &rarr;</a></div>
+<div class="card"><div class="tag">MERN &middot; MongoDB &middot; JWT</div><h3>OMedico, Book a Doctor</h3><p>Doctor appointment platform with dashboards for patients, doctors and admins, online booking, waiting lists and admin approval of doctors. Built during my internship.</p><a class="link" href="https://github.com/Akashkumar026/BOOK-A-DOCTOR">View code &rarr;</a></div>
+<div class="card"><div class="tag">UiPath &middot; Gmail &middot; Excel</div><h3>MailPilot</h3><p>RPA workflow that reads Gmail, classifies messages by keyword, assigns High, Medium or Low priority, flags follow-ups and logs everything to Excel.</p></div>
+<div class="card"><div class="tag">Tableau &middot; Analytics</div><h3>Real Estate Price Prediction</h3><p>Dashboards for comparing real-estate price trends across areas.</p><a class="link" href="https://github.com/Akashkumar026/Real-Estate-Price-Prediction-Tableau">View code &rarr;</a></div>
+<div class="card"><div class="tag">C++ &middot; MQTT</div><h3>IoT projects</h3><p>Smart-home MQTT assignment and sensor-based projects.</p><a class="link" href="https://github.com/Akashkumar026/IOT">View code &rarr;</a></div>
+<div class="card"><div class="tag">GitHub</div><h3>More work</h3><p>Everything else I've built is on my GitHub profile.</p><a class="link" href="https://github.com/Akashkumar026?tab=repositories">All repositories &rarr;</a></div>
+</div></div></section>
 
-<section id="experience">
-<h2>Experience and education</h2>
-<div class="item"><h3>Full Stack Development (MERN) Intern</h3><div class="meta">SmartBridge, FutureSkills Prime &middot; 6 Jul to 6 Aug 2026</div>
-<p>Built the OMedico doctor appointment platform.</p></div>
-<div class="item"><h3>B.E. Computer Science and Engineering</h3><div class="meta">Mahendra Engineering College, Namakkal &middot; 2024 to 2028</div>
-<p>Advanced Java, IoT, embedded systems, AI, OOASE.</p></div>
-<h3 style="margin-top:32px">Certifications and activities</h3>
-<ul style="margin-top:8px">
+<section id="skills"><div class="sec skills">
+<h2><b>03</b>Skills</h2>
+<div>
+<div><b>Languages</b><span>Java, Python, C, data structures and algorithms</span></div>
+<div><b>Web</b><span>HTML, CSS, React, Node.js, Express, REST APIs, Spring Boot (basic)</span></div>
+<div><b>Data</b><span>Tableau, MongoDB (basic), MySQL (basic)</span></div>
+<div><b>IoT and systems</b><span>MQTT, Red Hat Linux, PowerShell</span></div>
+<div><b>Tools</b><span>Git, GitHub, UiPath, Excel</span></div>
+</div></div></section>
+
+<section id="experience"><div class="sec">
+<h2><b>04</b>Experience</h2>
+<div>
+<div class="tl"><h3>Full Stack Development (MERN) Intern</h3><div class="when">SmartBridge, FutureSkills Prime &middot; 6 Jul to 6 Aug 2026</div><p>Built the OMedico doctor appointment platform.</p></div>
+<div class="tl"><h3>B.E. Computer Science and Engineering</h3><div class="when">Mahendra Engineering College, Namakkal &middot; 2024 to 2028</div><p>Advanced Java, IoT, embedded systems, AI, OOASE.</p></div>
+<div class="tl"><h3>Certifications and activities</h3><ul class="plain">
 <li>NPTEL: Introduction to Internet of Things; Programming in Java</li>
 <li>Infosys Springboard: DSA, C, Python Foundation, HTML5, CSS3, JavaScript, Front End Web Developer</li>
 <li>Hackathons (participant): INNOVATIX, BOTVERSE, VIT SustainAI GreenOps</li>
-</ul>
-</section>
+</ul></div>
+</div></div></section>
 
-<section id="contact">
-<h2>Contact</h2>
-<p>Email me at <a href="mailto:akash201926@gmail.com">akash201926@gmail.com</a>.</p>
-</section>
+<section id="contact" style="border-bottom:0"><div class="contact">
+<p class="eyebrow">Contact</p>
+<p class="big">Let's talk about an internship.<br><a href="mailto:akash201926@gmail.com">akash201926@gmail.com</a></p>
+<div class="links"><a href="https://github.com/Akashkumar026">GitHub</a><a href="https://www.linkedin.com/in/akashkumar-s-6b10263b5/">LinkedIn</a></div>
+</div></section>
 
 <footer>&copy; 2026 Akashkumar S</footer>
 </div>
